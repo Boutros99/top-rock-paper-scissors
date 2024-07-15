@@ -64,14 +64,16 @@ function playRound(humanChoice,computerChoice) {
 function playGame() {
     computerScore=0;
     humanScore=0; 
+    let roundNumber=0;
     let computerSelection;
     let humanSelection ;
 
-    while (humanScore<5 && computerScore<5) {
+    while (roundNumber<5) {
         computerSelection=getComputerChoice();
         humanSelection=getHumanChoice();
         console.log(playRound(humanSelection, computerSelection));
         console.log(`the score is ${computerScore} for the machine and ${humanScore} for you`);
+        roundNumber+=1;
     }  ;
 
     console.log(`End of the game : ${computerScore} for the machine and ${humanScore} for you`);
