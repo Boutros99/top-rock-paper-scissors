@@ -6,10 +6,10 @@ let humanScore=0;
 
 /* functions */
 function getComputerChoice () {
-    let number=Math.trunc(Math.random()*10);
-    if (number%3==0) { 
+    let number=Math.floor(Math.random()*3)+1;
+    if (number==1) { 
         return "rock";
-    } else if (number%3==1) {
+    } else if (number==2) {
         return "paper";
     }  
     return "scissors" ;
